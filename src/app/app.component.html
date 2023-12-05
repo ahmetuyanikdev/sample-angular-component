@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>{{title}}</h2>
+  <div>
+    <table>
+      <tbody>
+        <tr *ngFor = "let x of names">
+          <td>{{x}}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <input #test type="text" (ngModel) = "test.value" required />
+          <button (click)="addNewPerson(test.value)">Add</button>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
